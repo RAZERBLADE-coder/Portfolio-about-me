@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zamonaviy Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: "Monsterrat";
+            src: url(./fonts/Montserrat-Regular.ttf);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Monsterrat";
+        }
+
+        body {
+            line-height: 1.6;
+            background: #000;
+            color: #fff;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            position: relative;
+            background: linear-gradient(135deg, #00f, #0f0, #f00);
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: fadeInDown 1.5s ease-out;
+            text-shadow: 0 0 20px #0ff;
+        }
+
+        header p {
+            font-size: 1.5rem;
+            animation: fadeInUp 1s ease-out;
+            text-shadow: 0 0 10px #f0f;
+        }
+
+        header .scroll-down {
+            position: absolute;
+            bottom: 20px;
+            font-size: 1rem;
+            animation: bounce 2s infinite;
+            color: #0ff;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            color: #fff;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 0 15px #0ff;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: rgb(52, 30, 248);
+            text-shadow: 0 0 10px rgb(0, 21, 255);
+        }
+
+        section {
+            padding: 6rem 2rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: #111;
+            transition: background 0.6s;
+            opacity: 0;
+            transform: translateY(50px);
+        }
+
+        section.active {
+            opacity: 1;
+            transform: translateY(0);
+            transition: all 1s ease-in-out;
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-shadow: 0 0 15px rgb(0, 8, 255);
+        }
+
+        section p {
+            max-width: 800px;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 1.2rem;
+            color: #ccc;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, #f00, #00f);
+            color: #fff;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 0.5rem;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #0ff;
+            text-shadow: 0 0 10px #0ff;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#about">Men Haqimda</a></li>
+            <li><a href="#skills">Ko'nikmalar</a></li>
+            <li><a href="#projects">Loyihalar</a></li>
+            <li><a href="#contact">Bog'lanish</a></li>
+            <li><a href="#blog">Blog</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Portfolioga Xush Kelibsiz</h1>
+        <p>Ko'nikmalarim, loyihalarim va tajribalarim bilan tanishing</p>
+        <span class="scroll-down">Pastga aylantiring</span>
+    </header>
+
+    <section id="about">
+        <h2>Men Haqimda</h2>
+        <p>Salom! Men Kamron Davronov, tajribali va qiziqqon web-dasturchiman. Vaqtimning ko'p qismini zamonaviy va funksional veb-saytlar yaratishga bag'ishlayman. IT yangiliklari va kvant mexanikasiga bo'lgan qiziqishim meni doimiy o'sishga undaydi.</p>
+        <p>Mening portfoliomda turli xil loyihalar, jumladan, e-tijorat platformalari va interaktiv veb-saytlar mavjud. Mening maqsadim texnologiya yordamida jahon miqyosida o'zgarishlar kiritish.</p>
+        <p>Dasturlashdan tashqari, yangi IT uskunalarini o'rganishni va Minecraft modlarini sinab ko'rishni yoqtiraman.</p>
+    </section>
+
+    <section id="skills">
+        <h2>Ko'nikmalarim</h2>
+        <p>Men oldingi va orqa tomon dasturlashni yaxshi bilaman. HTML, CSS, JavaScript va React, Node.js kabi texnologiyalar asosiy ko'nikmalarimdir. Versiya boshqaruv tizimlari (Git) bilan ishlashda tajribam bor.</p>
+        <p>Hozirda TypeScript, Tailwind CSS kabi yangi vositalarni o'rganmoqdaman. Maqsadim mijozlar uchun qulay va samarali veb-saytlarni yaratishdir.</p>
+        <p>Bundan tashqari, MongoDB va MySQL kabi ma'lumotlar bazalari bilan ishlash tajribam bor, shuningdek, AWS va Azure platformalarida dasturlarni joylashtirishga qodirman.</p>
+    </section>
+
+    <section id="projects">
+        <h2>Loyihalar</h2>
+        <p>Quyidagi loyihalar ustida ishlaganman:</p>
+        <p>1. Zamonaviy dizayn va animatsiyalarga boy veb-sayt.</p>
+        <p>2. Xavfsiz to'lov tizimi va foydalanuvchilarga qulay interfeysli e-tijorat platformasi.</p>
+        <p>3. Blogerlar va ijodkorlar uchun qulay kontent boshqaruv tizimiga ega blog platformasi.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Bog'lanish</h2>
+        <p>Agar menda qiziqish uyg'otadigan takliflaringiz bo'lsa, menga kamron@example.com orqali yozishingiz yoki LinkedIn va GitHub orqali bog'lanishingiz mumkin. Yangi loyihalar va hamkorliklarni muhokama qilishdan mamnun bo'laman!</p>
+        <p>Ijtimoiy tarmoqlar yoki shaxsiy blogim orqali ham aloqada bo'lishingiz mumkin.</p>
+        <p>Sizdan javob kutaman!</p>
+    </section>
+
+    <section id="blog">
+        <h2>Blogim</h2>
+        <p>Blogimga xush kelibsiz! Bu yerda men web-dasturlash, texnologiyalar va shaxsiy rivojlanish haqidagi fikrlarimni baham ko'raman.</p>
+        <p>So'nggi maqolalar:</p>
+        <p>1. "Saytingizni tezlashtirish uchun 5 ta maslahat"</p>
+        <p>2. "Kvant mexanikasini tushunish uchun boshlang'ich qo'llanma"</p>
+        <p>3. "Web-dasturlashda ijod va mantiqni uyg'unlashtirish yo'llari"</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Kamron Davronov</p>
+        <a href="#">LinkedIn</a>
+        <a href="#">GitHub</a>
+        <a href="#">Bog'lanish</a>
+    </footer>
+
+    <script>
+        const sections = document.querySelectorAll('section');
+        window.addEventListener('scroll', () => {
+            const scrollPos = window.scrollY + window.innerHeight / 1.5;
+
+            sections.forEach(section => {
+                if (scrollPos > section.offsetTop) {
+                    section.classList.add('active');
+                }
+            });
+        });
+
+        document.querySelectorAll('nav ul li a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+    </script>
+</body>
+</html>
